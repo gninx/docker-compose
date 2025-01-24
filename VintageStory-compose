@@ -6,8 +6,8 @@ services:
     stdin_open: true
     tty: true
     environment:
-      SERVER_NAME: "THAC0s Realm"
-      SERVER_PASSWORD: "padlock"
+      SERVER_NAME: "ServerName"
+      SERVER_PASSWORD: "password"
       WORLDCONFIG_GRACE_TIMER: "5"
       WORLDCONFIG_DEATH_PUNISHMENT: "keep"
       WORLDCONFIG_COLOR_ACCURATE_WORLDMAP: "true"
