@@ -1,0 +1,19 @@
+services:
+  vintage-story:
+    container_name: vsserver
+    image: pepecitron/vintagestory-server
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    environment:
+      SERVER_NAME: "THAC0s Realm"
+      SERVER_PASSWORD: "padlock"
+      WORLDCONFIG_GRACE_TIMER: "5"
+      WORLDCONFIG_DEATH_PUNISHMENT: "keep"
+      WORLDCONFIG_COLOR_ACCURATE_WORLDMAP: "true"
+      WORLDCONFIG_TEMPORAL_STORM_SLEEPING: "0"
+      WORLDCONFIG_CLASS_EXCLUSIVE_RECIPES: "false"
+    ports:
+      - "42420:42420"
+    volumes:
+      - /media/ssd/vintage-story/data:/data/server-file
