@@ -11,4 +11,3 @@ services:
     restart: on-failure:5
     ports:
       - 5022:8080
-#testing
