@@ -1,6 +1,6 @@
 services:
   netdata:
-    container_name: Netdata
+    container_name: netdata
     image: netdata/netdata:latest
     healthcheck:
       test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/19999' || exit 1
@@ -25,7 +25,7 @@ services:
       - /sys:/host/sys:ro
       - /proc:/host/proc:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /media/ssd/netdata/config:/etc/netdata:rw
-      - /media/ssd/netdata/data:/var/lib/netdata:rw
-      - /media/ssd/netdata/cache:/var/cache/netdata:rw
+      - /mnt/zcargo/netdata/config:/etc/netdata:rw
+      - /mnt/zcargo/netdata/data:/var/lib/netdata:rw
+      - /mnt/zcargo/netdata/cache:/var/cache/netdata:rw
     restart: on-failure:5
